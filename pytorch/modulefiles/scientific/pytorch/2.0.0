@@ -1,0 +1,21 @@
+#%Module 1.0
+
+proc ModulesHelp { } {
+   puts stderr "This module adds PyTorch 2.0.0 paths"
+}
+
+module-whatis "Sets up PyTorch 2.0.0 in your environment."
+
+prepend-path PATH                  ~/.localenvs/pytorch2.0.0/bin
+prepend-path PYTHONPATH            ~/.localenvs/pytorch2.0.0/lib64/python3.10/site-packages/
+prepend-path PYTHONPATH            ~/.localenvs/pytorch2.0.0/lib/python3.10/site-packages/
+prepend-path PATH                  /apps/utils/miniforge3/condabin
+prepend-path PATH                  /apps/utils/miniforge3/envs/pytorch-2-0-0/bin
+setenv       LOCALPKGS             ~/.localenvs/pytorch2.0.0
+setenv       CONDA_EXE             /apps/utils/miniforge3/bin/conda
+setenv       CONDA_PYTHON_EXE      /apps/utils/miniforge3/bin/python
+setenv       CONDA_SHLVL           2
+setenv       CONDA_PREFIX          /apps/utils/miniforge3/envs/pytorch-2-0-0
+setenv       CONDA_DEFAULT_ENV     /apps/utils/miniforge3/envs/pytorch-2-0-0
+setenv       CONDA_PROMPT_MODIFIER (pytorch-2-0-0)
+setenv       CONDA_PREFIX_1        /apps/utils/miniforge3
